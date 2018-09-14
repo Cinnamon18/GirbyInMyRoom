@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour {
 	public static Interactable inRange;
 
 	public GameObject UIprefab;
 
-	public EventManager em;
+	public bool collisionBasedTrigger = true;
+
+	public InteractionManager interactionManager;
 
 	private GameObject bigPanel, rightPanel, leftPanel;
 	private bool triggered = false;
@@ -26,18 +29,9 @@ public class Interactable : MonoBehaviour {
 				leftPanel = ui.Find("LeftPanel").gameObject;
 			}
 		}
-
-		em = new EventManager();
-		System.Func<bool> cond = delegate {
-			Debug.Log("CHECKKINGG!!");
-			return true;
-		};
-		System.Func<bool> action = delegate {
-			Debug.Log("WORKING!!!");
-			return true;
-		};
-		InteractableEvent ie = new InteractableEvent(cond, action);
-		em.AddEvent(ie);
+		if (interactionManager == null)
+			interactionManager = new InteractionManager();
+		
 
 		CloseUI();
 		
@@ -54,14 +48,18 @@ public class Interactable : MonoBehaviour {
 		if (other.CompareTag("Player")) {
 			Debug.Log("In range!!");
 			inRange = transform.GetComponent<Interactable>();
-			rightPanel.SetActive(true);
+			if (ui != null)
+				rightPanel.SetActive(true);
+			if (collisionBasedTrigger)
+				TriggerInteractable();
 		}
 	}
 
 	void OnTriggerExit(Collider other)
 	{
 		if (other.CompareTag("Player") && inRange == transform.GetComponent<Interactable>()) {
-			rightPanel.SetActive(false);
+			if (ui != null)
+				rightPanel.SetActive(false);
 
 			inRange = null;
 		}
@@ -83,10 +81,12 @@ public class Interactable : MonoBehaviour {
 			triggered = false;
 		} else {
 			Debug.Log("INTERACTABLE TRIGGERED");
-			PlayerController.playerController.LockCameraToPoint(bigPanel.transform);
-			em.CheckEvents();
-			rightPanel.SetActive(false);
-			bigPanel.SetActive(true);
+			interactionManager.CheckEvents();
+			if (ui != null) {
+				PlayerController.playerController.LockCameraToPoint(bigPanel.transform);
+				rightPanel.SetActive(false);
+				bigPanel.SetActive(true);
+			}
 			triggered = true;
 		}
 	}
