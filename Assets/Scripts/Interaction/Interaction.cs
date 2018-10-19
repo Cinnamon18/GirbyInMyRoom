@@ -8,35 +8,33 @@ using UnityEngine.Events;
 public class Interaction {
 
 	[SerializeField]
-	public BoolCondition boolCondition;
-
-	public IntCondition compCondition;
+	public Condition conditionObject;
 
 	public UnityEvent action;
 
+	public Interaction() {
+		this.conditionObject = null;
+		this.action = null;
+	}
+	public Interaction(Condition condition, UnityEvent action) {
+		this.conditionObject = condition;
+		this.action = action;
+	}
 
-	public bool CheckAndReact() {
-		bool condNotNull = (boolCondition != null);
-		bool compNotNull = (compCondition != null);
-		bool condResult = !condNotNull;
-		bool compResult = !compNotNull;
-		if (!compNotNull && !condNotNull) {
-			Debug.Log("This interaction doesn't contain any condition, so it will trigger successful. ");
-		} else {
-			if (condNotNull) {
-				condResult = boolCondition.IsSatisfied();
-			}
-			if (compNotNull) {
-				compResult = compCondition.IsSatisfied();
-			}
-		}
+    public bool Check()
+    {
+        if (conditionObject == null) {
+            Debug.Log("No condition on interaction");
+            return true;
+        } else {
+            return conditionObject.ConditionMet;
+        }
+        ;
+    }
 
-		if (condResult && compResult) {
-			action.Invoke();
-			return true;
-		}
-
-		return false;
+	public void React() { 
+		action.Invoke();
+		
 	}
 }
 
@@ -45,25 +43,20 @@ public class InteractionNonSequenced : Interaction {
 	public bool repeat = true;
 	private int timesRepeated = 0;
 
+	public InteractionNonSequenced(Condition condition, UnityEvent action) {
+		base.conditionObject = condition;
+		base.action = action;
+	}
+
 	new public bool CheckAndReact() {
-		bool condNotNull = (boolCondition != null);
-		bool compNotNull = (compCondition != null);
-		bool condResult = !condNotNull;
-		bool compResult = !compNotNull;
-		if (!compNotNull && !condNotNull) {
+		bool condResult = true;
+		if (base.conditionObject == null) {
 			Debug.Log("This interaction doesn't contain any condition, so it will trigger successful. ");
 		} else {
-			if (condNotNull) {
-				condResult = boolCondition.IsSatisfied();
-			}
-			if (compNotNull) {
-				compResult = compCondition.IsSatisfied();
-			}
+			condResult = base.conditionObject.ConditionMet;
 		}
 
-		Debug.Log(condResult);
-
-		if (condResult && compResult && (repeat || (timesRepeated<1))) {
+		if (condResult && (repeat || (timesRepeated<1))) {
 			action.Invoke();
 			timesRepeated++;
 			return true;

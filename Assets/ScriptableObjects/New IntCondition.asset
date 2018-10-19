@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: LadybugCubes
   conditionToMatch: 1
-  currentCondition: 0
+  currentCondition: 1
   matchTo: 1
-  currentValue: 0
+  currentValue: 1
