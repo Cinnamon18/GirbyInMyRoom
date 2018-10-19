@@ -367,7 +367,7 @@ Transform:
   m_Children:
   - {fileID: 1444348522}
   m_Father: {fileID: 2146625059}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &109673311
 MonoBehaviour:
@@ -382,71 +382,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionManager:
     sequenceLocation: 0
-    sequentialEvents:
-    - conditionObject: {fileID: 0}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1340902578}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: I'm a special bug who has nothing special to say :(
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-    - conditionObject: {fileID: 0}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1340902578}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: yeet
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-    events:
-    - conditionObject: {fileID: 0}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1340902578}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: I'm a special bug who has nothing special to say :(
-              m_BoolArgument: 0
-            m_CallState: 0
-          - m_Target: {fileID: 1340902578}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: yeet
-              m_BoolArgument: 0
-            m_CallState: 0
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      repeat: 1
+    sequentialEvents: []
+    events: []
 --- !u!135 &109673312
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -758,7 +695,7 @@ Transform:
   - {fileID: 414068009}
   - {fileID: 1762811156}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &198060383
 MonoBehaviour:
@@ -961,6 +898,10 @@ Prefab:
     - target: {fileID: 100004, guid: 16410a3694559834fb4a81dd2d4d6eb6, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 16410a3694559834fb4a81dd2d4d6eb6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16410a3694559834fb4a81dd2d4d6eb6, type: 3}
@@ -1612,12 +1553,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aafbb21f4a7809d469211b6cebdec271, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &401159832 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114126223344871628, guid: aafbb21f4a7809d469211b6cebdec271,
-    type: 2}
-  m_PrefabInternal: {fileID: 358201645}
-  m_Script: {fileID: 11500000, guid: 8a20c851a8e1407499dfe9d0fe70aca8, type: 3}
 --- !u!1 &404483854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4150,7 +4085,7 @@ Transform:
   m_Children:
   - {fileID: 1155037327}
   m_Father: {fileID: 2146625059}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1132999881
 MonoBehaviour:
@@ -4165,53 +4100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionManager:
     sequenceLocation: 0
-    sequentialEvents:
-    - conditionObject: {fileID: 0}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1155037328}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: can you find me some rotten gum? Now *that's* the
-                taste of home...
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 841455609}
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-    - conditionObject: {fileID: 841455611}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1155037328}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Bone apple teeth :P
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
+    sequentialEvents: []
     events: []
 --- !u!135 &1132999882
 SphereCollider:
@@ -4301,6 +4190,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1133401431
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2146625059}
+    m_Modifications:
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 15.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -20.858717
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dea5cafda0da0d34da35e2f42390ab15, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1133401432 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4984427161778974, guid: dea5cafda0da0d34da35e2f42390ab15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1133401431}
 --- !u!1001 &1150499027
 Prefab:
   m_ObjectHideFlags: 0
@@ -4626,12 +4562,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224162064058694884, guid: aafbb21f4a7809d469211b6cebdec271,
     type: 2}
   m_PrefabInternal: {fileID: 1155037326}
---- !u!114 &1155037328 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114126223344871628, guid: aafbb21f4a7809d469211b6cebdec271,
-    type: 2}
-  m_PrefabInternal: {fileID: 1155037326}
-  m_Script: {fileID: 11500000, guid: 8a20c851a8e1407499dfe9d0fe70aca8, type: 3}
 --- !u!1001 &1165819388
 Prefab:
   m_ObjectHideFlags: 0
@@ -4821,100 +4751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionManager:
     sequenceLocation: 0
-    sequentialEvents:
-    - conditionObject: {fileID: 0}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 401159832}
-            m_MethodName: ChangeTypeSpeed
-            m_Mode: 3
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 20
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 401159832}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Hello!!! Do not be alarmed, but my head is on backwards
-                and I need some help... =_=;;
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-    - conditionObject: {fileID: 0}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 401159832}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Go get me that cube... No not the bug one.
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 2112287165}
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-    - conditionObject: {fileID: 2112287167}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 401159832}
-            m_MethodName: TriggerText
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: You DID it. aBSOLUTE MAD MAN.
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-    events:
-    - conditionObject: {fileID: 0}
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 2115548469}
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      repeat: 0
+    sequentialEvents: []
+    events: []
 --- !u!135 &1279039598
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5262,12 +5100,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aafbb21f4a7809d469211b6cebdec271, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1340902578 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114126223344871628, guid: aafbb21f4a7809d469211b6cebdec271,
-    type: 2}
-  m_PrefabInternal: {fileID: 1340902577}
-  m_Script: {fileID: 11500000, guid: 8a20c851a8e1407499dfe9d0fe70aca8, type: 3}
 --- !u!1 &1349329708
 GameObject:
   m_ObjectHideFlags: 0
@@ -6943,6 +6775,49 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: e9e6ccb2ae64f5c438e4b5cd8b45a0b3, type: 3}
+--- !u!1 &1808890649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808890650}
+  - component: {fileID: 1808890651}
+  m_Layer: 0
+  m_Name: collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1808890650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808890649}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!64 &1808890651
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808890649}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: fc6f57ff9b7b55a4cae67f87fcc580c8, type: 3}
 --- !u!1001 &1827911082
 Prefab:
   m_ObjectHideFlags: 0
@@ -7035,15 +6910,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1827911084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35e42bc48f1a34e4881dea2b9d7a9728, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionManager:
-    sequenceLocation: 0
-    sequentialEvents: []
-    events: []
-  periodLength: 1
-  hoverDelta: {x: 0, y: 0.05, z: 0}
 --- !u!1001 &1871906796
 Prefab:
   m_ObjectHideFlags: 0
@@ -7203,7 +7072,7 @@ RectTransform:
   m_Children:
   - {fileID: 1628694561}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8044,11 +7913,6 @@ Transform:
   m_Father: {fileID: 517403710}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1 &2115548469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1886458674809272, guid: aafbb21f4a7809d469211b6cebdec271,
-    type: 2}
-  m_PrefabInternal: {fileID: 358201645}
 --- !u!1 &2146625058
 GameObject:
   m_ObjectHideFlags: 0
@@ -8076,6 +7940,7 @@ Transform:
   m_Children:
   - {fileID: 2049539802}
   - {fileID: 1279039594}
+  - {fileID: 1133401432}
   - {fileID: 109673310}
   - {fileID: 1132999880}
   m_Father: {fileID: 1564888124}
